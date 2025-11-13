@@ -1,0 +1,461 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kalam:wght@300;400;700&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --cor-primaria: #9d4edd66;
+  --cor-primaria-escura: #9d4edd8f;
+  --cor-secundaria: #e5989b;
+  --cor-terciaria: #b5838d;
+  --cor-neutra: #6d6875;
+  --fonte-destaque: "Kaushan Script", sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h2 {
+  color: rgb(108, 0, 108);
+  font-size: 1.8em;
+  font-family: var(--fonte-destaque);
+  text-align: center;
+}
+
+.texto-destaque {
+  background-color: rgba(155, 0, 155, 0.516);
+}
+
+/* CABEÇALHO */
+header {
+  flex-flow: column wrap;
+  gap: 15px;
+  border-bottom: 1px solid var(--cor-neutra);
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  background-color: white;
+}
+
+header h1 {
+  font-family: var(--fonte-destaque);
+  font-size: 1.5em;
+  gap: 5px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu-burguer {
+  font-size: 2em;
+}
+
+/* NAVEGAÇÃO */
+#menu-navegacao {
+  display: none;
+}
+
+#menu-navegacao ul {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+#menu-navegacao ul > li > a {
+  display: block;
+  background-color: var(--cor-primaria);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.196);
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+#menu-navegacao ul > li:hover {
+  background-color: var(--cor-primaria-escura);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+#menu-navegacao > ul > li > a.botao-denuncie {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  background-color: rgba(255, 0, 0, 0.551);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.196);
+}
+
+#menu-navegacao > ul > li > a.botao-denuncie:hover {
+  background-color: rgba(255, 0, 0, 0.648);
+}
+
+#menu-navegacao > ul > li > a.botao-denuncie:hover > a {
+  color: white;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* SEÇÃO INÍCIO */
+.secao-inicio {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color: white;
+  text-align: center;
+  background-image: url(imagem/imagens/imagem1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.secao-inicio div {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.botao-denuncie-cta {
+  width: 150px;
+  margin-top: 20px;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(168, 0, 0);
+  text-shadow: 1px 1px 1px black;
+}
+
+.botao-denuncie-cta:hover {
+  scale: 105%;
+  background-color: rgb(190, 0, 0);
+}
+
+/* SEÇÃO VIOLÊNCIA */
+.secao-violencia {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+/* SEÇÃO TIPOS DE VIOLÊNCIA */
+.secao-tipos-violencia {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.secao-tipos-violencia > .container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.secao-tipos-violencia > .container > .card-tipo-violencia {
+  box-sizing: border-box;
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  align-items: center;
+  padding: 30px;
+  background-color: #d4a6fa;
+  border-radius: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+}
+
+details {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+summary {
+  font-weight: 500;
+}
+
+.lista-violencia {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  font-style: italic;
+  color: rgb(46, 46, 46);
+  margin-left: 22px;
+  font-size: 0.85em;
+}
+
+/* SEÇÃO LEI MARIA DA PENHA */
+.secao-lei {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-lei-maria-penha {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.container-lei-maria-penha > .banner-lei {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding-bottom: 150px;
+  padding-top: 150px;
+  color: white;
+  text-align: center;
+  background: url(imagem/imagens/imagem2.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.container-lei-maria-penha > .banner-lei > a {
+  display: block;
+  width: 240px;
+  margin: auto;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.289);
+}
+
+.container-lei-maria-penha > .banner-lei > a:hover {
+  scale: 105%;
+  background-color: rgb(171, 0, 171);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.container-lei-maria-penha > .conteudo-lei {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  padding: 40px 40px 0 40px;
+  line-height: 1.8em;
+  text-align: justify;
+}
+
+/* SEÇÃO COMO DENUNCIAR */
+.secao-como-denunciar {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.secao-como-denunciar > .container-onde-denunciar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px 0 20px;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .destaque-180 {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .destaque-180 > .card-denuncia-180 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-alinhado-direita {
+  align-items: flex-end;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia > div > .descricao-canal {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.7em;
+  padding-bottom: 40px;
+}
+
+.secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* RODAPÉ */
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  width: 100%;
+  padding: 20px 15px;
+  background-image: linear-gradient(145deg, #490149e2, transparent);
+}
+
+footer > #footer-principal {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer > #footer-mobile {
+  text-align: center;
+}
+
+footer > #footer-principal > div > small {
+  display: none;
+}
+
+footer > #footer-principal > div > p {
+  display: none;
+}
+
+footer > #footer-navegacao {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+footer > #footer-navegacao > .footer-coluna > ul {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+  list-style: none;
+}
+
+footer > #footer-navegacao > .footer-coluna > ul > .footer-titulo {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+footer > #footer-navegacao > .footer-coluna > ul > li > a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+footer > #footer-navegacao > .footer-coluna > ul > li > a:hover {
+  color: rgb(108, 0, 108);
+  cursor: pointer;
+  text-decoration: rgb(108, 0, 108) underline;
+}

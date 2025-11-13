@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1087px) {
+  
+  #menu-burguer {
+    display: none;
+  }
+
+  #menu-navegacao {
+    display: flex;
+  }
+
+  #menu-navegacao > ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #menu-navegacao ul > li:hover {
+    background-color: #9d4edd66;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 5px;
+  }
+
+  #menu-navegacao ul > li > a {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  header {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .header-container > #menu-burguer {
+    display: none;
+  }
+
+  .secao-violencia {
+    padding: 0 20%;
+  }
+
+  .secao-tipos-violencia > .container {
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .secao-tipos-violencia > .container > .card-tipo-violencia {
+    width: 45%;
+  }
+
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary {
+    list-style: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  
+  .conteudo-lei > p {
+    padding: 0 20%;
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+
+  
+  .container-lei-maria-penha > .banner-lei {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 15pt;
+    padding-top: 220px;
+    padding-bottom: 220px;
+  }
+
+  .container-lei-maria-penha > .banner-lei > a {
+    width: 300px;
+  }
+
+  
+  .secao-como-denunciar > .container-onde-denunciar {
+    padding: 0 22%;
+  }
+
+  footer {
+    padding: 30px 22%;
+  }
+}
+
+
+@media screen and (min-width: 850px) {
+
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia {
+    width: auto;
+  }
+
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia {
+    justify-content: space-between;
+  }
+
+  .secao-como-denunciar > .container-onde-denunciar > .destaque-180 > .card-denuncia-180 {
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia > div > .descricao-canal {
+    font-size: 0.8em;
+  }
+
+  footer {
+    height: 100%;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  footer > #footer-principal {
+    height: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding-right: 15px;
+    width: 50%;
+  }
+
+  footer > #footer-navegacao {
+    width: 50%;
+  }
+
+  footer > #footer-principal > div > p {
+    color: black;
+    font-weight: 600;
+    display: block;
+    font-size: 0.8em;
+  }
+
+  footer > #footer-principal > div > h3 {
+    margin-bottom: 10px;
+  }
+
+  footer > #footer-principal > div > small {
+    display: block;
+  }
+
+  footer > #footer-mobile {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia {
+    font-size: 1.1em;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  footer > #footer-navegacao {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  footer > #footer-navegacao > .footer-coluna > nav > ul > .footer-titulo {
+    font-size: 0.9em;
+  }
+
+  footer > #footer-navegacao > .footer-coluna > ul > li > a {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoio Mulher</title>
+  <link rel="shortcut icon" href="imagem/icones/logo.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-query.css">
+</head>
+
+<body onresize="mudouTamanho()">
+
+  <header id="site-header">
+    <div class="header-container">
+      <h1>
+        <img src="imagem/icones/logo.svg" alt="Logo" width="25" height="25"> 
+        Apoio Mulher
+      </h1>
+      <i id="menu-burguer" class="material-icons" onclick="clickMenu()">menu</i>
+    </div>
+
+    <nav id="menu-navegacao">
+      <ul>
+        <li><a onclick="clickMenu()" href="#secao-inicio">Início</a></li>
+        <li><a onclick="clickMenu()" href="#secao-violencia">O que é Violência Doméstica</a></li>
+        <li><a onclick="clickMenu()" href="#secao-tipos-violencia">Tipos de Violência</a></li>
+        <li><a onclick="clickMenu()" href="#secao-lei">A Lei</a></li>
+        <li><a onclick="clickMenu()" href="#secao-como-denunciar">Onde Denunciar</a></li>
+        <li>
+          <a class="botao-denuncie" 
+             href="https://delegaciaeletronica.pcdf.df.gov.br/RegistroOcorrencia/Violencia_Domestica_Familiar_Contra_Mulher"
+             target="_blank">
+            Denuncie Agora
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="secao-inicio" id="secao-inicio">
+      <div>
+        <h1>Juntos Contra a Violência Doméstica</h1>
+        <p>A informação é a sua maior proteção. Denuncie. Não se cale.</p>
+        <a class="botao-denuncie-cta"
+           href="https://delegaciaeletronica.pcdf.df.gov.br/RegistroOcorrencia/Violencia_Domestica_Familiar_Contra_Mulher"
+           target="_blank">
+          Denuncie Agora
+        </a>
+      </div>
+    </section>
+
+    <section class="secao-violencia" id="secao-violencia">
+      <h2>O que é Violência Doméstica</h2>
+      <p>
+        De acordo com o art. 5º da Lei Maria da Penha, violência doméstica e familiar contra a mulher é 
+        "qualquer ação ou omissão baseada no gênero que lhe cause morte, lesão, sofrimento físico, sexual 
+        ou psicológico e dano moral ou patrimonial".
+      </p>
+    </section>
+
+    <section class="secao-tipos-violencia" id="secao-tipos-violencia">
+      <h2>Tipos de Violência</h2>
+      <div class="container">
+        <div class="card-tipo-violencia">
+          <div class="card-header">
+            <img src="imagem/icones/icon1.svg" alt="Ícone Violência Física" width="65" height="65">
+            <h3>Violência Física</h3>
+          </div>
+          <details>
+            <summary>Saiba mais...</summary>
+            <p style="color: rgb(46, 46, 46);">
+              Entendida como qualquer conduta que ofenda a integridade ou saúde corporal da mulher.
+            </p>
+            <br>
+            <ul class="lista-violencia" type="square">
+              <li>Espancamento</li>
+              <li>Atirar objetos, sacudir e apertar os braços</li>
+              <li>Estrangulamento ou sufocamento</li>
+              <li>Lesões com objetos cortantes ou perfurantes</li>
+              <li>Ferimentos causados por queimaduras ou armas de fogo</li>
+              <li>Tortura</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card-tipo-violencia">
+          <div class="card-header">
+            <img src="imagem/icones/icon2.svg" alt="Ícone Violência Psicológica" width="65" height="65">
+            <h3>Violência Psicológica</h3>
+          </div>
+          <details>
+            <summary>Saiba mais...</summary>
+            <p style="color: rgb(46, 46, 46);">
+              É considerada qualquer conduta que: cause dano emocional e diminuição da autoestima; 
+              prejudique e perturbe o pleno desenvolvimento da mulher; ou vise degradar ou controlar 
+              suas ações, comportamentos, crenças e decisões.
+            </p>
+            <br>
+            <ul class="lista-violencia" type="square">
+              <li>Abuso Verbal e Emocional</li>
+              <li>Coerção e Intimidação</li>
+              <li>Controle Social e Isolamento</li>
+              <li>Gaslighting (Manipulação da Sanidade)</li>
+              <li>Monitoramento e Perseguição</li>
+              <li>Restrição da Autonomia</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card-tipo-violencia">
+          <div class="card-header">
+            <img src="imagem/icones/icon3.svg" alt="Ícone Violência Sexual" width="65" height="65">
+            <h3>Violência Sexual</h3>
+          </div>
+          <details>
+            <summary>Saiba mais...</summary>
+            <p style="color: rgb(46, 46, 46);">
+              Trata-se de qualquer conduta que constranja a presenciar, a manter ou a participar de 
+              relação sexual não desejada mediante intimidação, ameaça, coação ou uso da força.
+            </p>
+            <br>
+            <ul class="lista-violencia" type="square">
+              <li>Ato Sexual Sem Consentimento</li>
+              <li>Coerção Sexual Não-Consensual</li>
+              <li>Controle Reprodutivo</li>
+              <li>Exploração e Coação para Matrimônio/Prostituição</li>
+              <li>Anulação dos Direitos Sexuais</li>
+              <li>Anulação dos Direitos Reprodutivos</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Violência Moral -->
+        <div class="card-tipo-violencia">
+          <div class="card-header">
+            <img src="imagem/icones/icon4.svg" alt="Ícone Violência Moral" width="65" height="65">
+            <h3>Violência Moral</h3>
+          </div>
+          <details>
+            <summary>Saiba mais...</summary>
+            <p style="color: rgb(46, 46, 46);">
+              É considerada qualquer conduta que configure calúnia, difamação ou injúria.
+            </p>
+            <br>
+            <ul class="lista-violencia" type="square">
+              <li>Calúnia (Acusação Falsa de Crime)</li>
+              <li>Injúria e Difamação (Ataque à Honra)</li>
+              <li>Emissão de Juízos Morais e Críticas Abusivas</li>
+              <li>Exposição da Vida Íntima</li>
+              <li>Desvalorização da Imagem Pessoal</li>
+              <li>Ataque Constante à Credibilidade</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-lei" id="secao-lei">
+      <div class="container-lei-maria-penha">
+        <div class="banner-lei">
+          <h1>A Lei na Íntegra</h1>
+          <a href="http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm" target="_blank">
+            Acessar a Lei Maria da Penha
+          </a>
+        </div>
+
+        <div class="conteudo-lei">
+          <img src="imagem/icones/icon.svg" alt="Balança de Justiça" width="80">
+          <p>
+            Antes da Lei Maria da Penha, a violência doméstica e familiar contra a mulher era tratada 
+            como crime de menor potencial ofensivo, enquadrada na <strong>Lei nº 9.099/1995</strong>.
+          </p>
+          <p>
+            Na prática, isso significava que a <mark class="texto-destaque">violência de gênero era banalizada,</mark> 
+            e as penas frequentemente se reduziam ao pagamento de cestas básicas ou a trabalhos comunitários. 
+            Não havia dispositivo legal para punir, com o rigor necessário, o autor da violência.
+          </p>
+          <p>
+            Para se ter uma ideia do descaso, após denunciar o agressor, a vítima ainda tinha que levar 
+            a intimação para que ele comparecesse perante o delegado.
+          </p>
+          <p>
+            Por isso, o Consórcio de ONGs que participou da criação da nova lei considerou fundamental 
+            desvincular a legislação da <strong>Lei nº 9.099/1995</strong>. Após mais de quatro anos de 
+            debate, a Lei Maria da Penha <strong>(Lei nº 11.340)</strong> foi sancionada em 
+            <strong>7 de agosto de 2006, </strong><mark class="texto-destaque">mudando drasticamente esse cenário.</mark>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-como-denunciar" id="secao-como-denunciar">
+      <h2>Onde Denunciar</h2>
+      <div class="container-onde-denunciar">
+        <div class="destaque-180">
+          <div class="card-denuncia-180">
+            <img src="imagem/imagens/imagem3.png" alt="Ícone 180" width="150px">
+            <p style="text-align: justify;">
+              A Central de Atendimento à Mulher é um serviço criado para o combate à violência 
+              contra a mulher e oferece três tipos de atendimento: registros de denúncias, 
+              orientações vítimas de violência e informações sobre campanhas.
+            </p>
+          </div>
+        </div>
+
+        <div class="lista-canais-denuncia">
+          <div class="canal-denuncia">
+            <a href="https://www.gov.br/mulheres/pt-br/ligue180/painel-da-rede-de-atendimento"
+               style="display: flex; align-items: center; gap: 5px;">
+              <img src="imagem/icones/icon5.svg" alt="Ícone Globo" width="20px">
+              www.mulher.gov.br
+            </a>
+            <div>
+              <p class="descricao-canal">Painel da Rede de Atendimento</p>
+            </div>
+          </div>
+
+          <div class="canal-denuncia canal-alinhado-direita">
+            <a href="https://wa.me/556196100180" style="display: flex; align-items: center; gap: 5px;">
+              <img src="imagem/icones/icon7.svg" alt="Ícone WhatsApp" width="25px">
+              (61) 9610-0180
+            </a>
+            <div>
+              <p class="descricao-canal">Envie uma Mensagem</p>
+            </div>
+          </div>
+
+          <div class="canal-denuncia">
+            <a href="tel:180" style="display: flex; align-items: center; gap: 5px">
+              <img src="imagem/icones/icon6.svg" alt="Ícone Telefone" width="20px">
+              Ligue 180
+            </a>
+            <div>
+              <p class="descricao-canal">Denúncia e informação</p>
+            </div>
+          </div>
+
+          <div class="canal-denuncia canal-alinhado-direita">
+            <a href="tel:190" style="display: flex; align-items: center; gap: 5px">
+              <img src="imagem/icones/icon6.svg" alt="Ícone Telefone" width="20px">
+              Ligue 190
+            </a>
+            <div>
+              <p class="descricao-canal">Emergência</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width: 100%; text-align: center; font-weight: 600;">
+        <p>Não se cale, denuncie.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-principal">
+      <div>
+        <h3 style="display: flex; align-items: center; gap: 5px;">
+          <img style="display: inline-block;" src="imagem/icones/logo.svg" alt="Logo" width="25" height="25">
+          Apoio Mulher
+        </h3>
+        <p>
+          Toda mulher merece respeito e liberdade. Combater a violência é lutar por justiça, 
+          quebrar o silêncio e fortalecer coragem e dignidade.
+        </p>
+      </div>
+      <div>
+        <small style="font-size: 0.7em;">
+          &copy;2025 | Desenvolvido por <strong>3º Sgt Robert Gomes</strong>
+        </small>
+      </div>
+    </div>
+
+    <div id="footer-navegacao">
+      <nav class="footer-coluna">
+        <ul style="font-weight: 500;">
+          <p class="footer-titulo">Menu</p>
+          <li><a onclick="clickMenu()" href="#secao-inicio">Início</a></li>
+          <li><a onclick="clickMenu()" href="#secao-violencia">O que é Violência Doméstica</a></li>
+          <li><a onclick="clickMenu()" href="#secao-tipos-violencia">Tipos de Violência</a></li>
+          <li><a onclick="clickMenu()" href="#secao-lei">A Lei</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-coluna">
+        <ul style="font-weight: 500;">
+          <p class="footer-titulo">Onde Denunciar</p>
+          <li>
+            <a href="https://www.gov.br/mulheres/pt-br/ligue180/painel-da-rede-de-atendimento"
+               style="display: flex; align-items: center; gap: 5px;">
+              <img src="imagem/icones-footer/icon5.svg" alt="Ícone Globo" width="20px">
+              www.mulher.gov.br
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/556196100180" style="display: flex; align-items: center; gap: 5px;">
+              <img src="imagem/icones-footer/icon7.svg" alt="Ícone WhatsApp" width="25px">
+              (61) 9610-0180
+            </a>
+          </li>
+          <li>
+            <a href="tel:180" style="display: flex; align-items: center; gap: 5px">
+              <img src="imagem/icones-footer/icon6.svg" alt="Ícone Telefone" width="20px">
+              Ligue 180
+            </a>
+          </li>
+          <li>
+            <a href="tel:190" style="display: flex; align-items: center; gap: 5px">
+              <img src="imagem/icones-footer/icon6.svg" alt="Ícone Telefone" width="20px">
+              Ligue 190
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="footer-mobile">
+      <small style="font-size: 0.7em;">
+        &copy;2025 | Desenvolvido por <strong>3º Sgt Robert Gomes</strong>
+      </small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

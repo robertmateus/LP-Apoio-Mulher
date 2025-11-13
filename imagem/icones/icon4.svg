@@ -1,0 +1,13 @@
+<svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+  <!-- Círculo externo (contorno) -->
+  <circle cx="55" cy="55" r="52" fill="none" stroke="rgb(108, 0, 108)" stroke-width="3"/>
+  
+  <!-- Círculo interno (fundo roxo) -->
+  <circle cx="55" cy="55" r="45" fill="rgb(108, 0, 108)"/>
+
+  <!-- Número “1.” -->
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+        font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">
+    4.
+  </text>
+</svg>
