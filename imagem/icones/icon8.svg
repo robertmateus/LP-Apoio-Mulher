@@ -2,5 +2,5 @@
     <circle cx="55" cy="55" r="52" fill="none" stroke="rgb(108, 0, 108)" stroke-width="3"/>
     <circle cx="55" cy="55" r="45" fill="rgb(108, 0, 108)"/>
     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
-      font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">1.</text>
+      font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">5.</text>
 </svg>

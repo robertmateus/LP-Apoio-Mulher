@@ -23,8 +23,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 10px;
+  height: 10px;
 }
 
 html,
@@ -78,11 +78,12 @@ h2 {
 header {
   flex-flow: column wrap;
   gap: 15px;
-  border-bottom: 1px solid var(--cor-neutra);
+  border-bottom: 2px solid var(--cor-primaria-escura);
   padding: 20px;
   display: flex;
   text-align: center;
   background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -92,15 +93,19 @@ header h1 {
   display: flex;
   align-content: center;
   align-items: center;
+  color: black;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #menu-burguer {
   font-size: 2em;
+  cursor: pointer;
+  color: black;
 }
 
 /* NAVEGAÇÃO */
@@ -118,33 +123,68 @@ header h1 {
 #menu-navegacao ul > li > a {
   display: block;
   background-color: var(--cor-primaria);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.196);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: black;
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Acessibilidade: estilos de foco para navegação por teclado */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-primaria-escura);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+#menu-burguer:focus-visible {
+  outline: 3px solid var(--cor-primaria-escura);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+#menu-navegacao ul > li > a:focus-visible,
+#menu-navegacao > ul > li > a.botao-denuncie:focus-visible,
+.botao-denuncie-cta:focus-visible,
+.container-lei-maria-penha > .banner-lei > a:focus-visible {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 #menu-navegacao ul > li:hover {
   background-color: var(--cor-primaria-escura);
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: all 0.3s ease;
+}
+
+#menu-navegacao ul > li:hover > a {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(157, 78, 221, 0.3);
 }
 
 #menu-navegacao > ul > li > a.botao-denuncie {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 14px;
-  background-color: rgba(255, 0, 0, 0.551);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.196);
+  font-weight: 600;
+  background-color: #e63946;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(230, 57, 70, 0.3);
+  transition: all 0.3s ease;
 }
 
 #menu-navegacao > ul > li > a.botao-denuncie:hover {
-  background-color: rgba(255, 0, 0, 0.648);
+  background-color: #d62828;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+  transform: translateY(-2px);
 }
 
 #menu-navegacao > ul > li > a.botao-denuncie:hover > a {
@@ -215,6 +255,7 @@ main {
   flex-flow: column nowrap;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .secao-tipos-violencia > .container {
@@ -231,21 +272,51 @@ main {
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
-  align-items: center;
+  align-items: flex-start;
   padding: 30px;
-  background-color: #d4a6fa;
-  border-radius: 60px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #e8d5f2 0%, #d4a6fa 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(157, 78, 221, 0.2);
+  min-width: 300px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+.secao-tipos-violencia > .container > .card-tipo-violencia:hover {
+  box-shadow: 0 12px 30px rgba(157, 78, 221, 0.3);
+  transform: translateY(-5px);
+}
+
+.secao-tipos-violencia > .container > .card-tipo-violencia > details {
+  width: 100%;
+}
+
+
 
 .card-header {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.card-header img {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+.card-header h3 {
+  white-space: nowrap;
+  margin: 0;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: rgb(108, 0, 108);
 }
 
 details {
@@ -255,7 +326,21 @@ details {
 }
 
 summary {
-  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(108, 0, 108);
+  transition: all 0.2s ease;
+  padding: 8px 0;
+  font-size: 0.95em;
+}
+
+summary:hover {
+  color: var(--cor-primaria-escura);
+  font-weight: 700;
+}
+
+details > p {
+  margin: 5px 0 10px 0;
 }
 
 .lista-violencia {
@@ -263,9 +348,9 @@ summary {
   flex-flow: column nowrap;
   gap: 10px;
   font-style: italic;
-  color: rgb(46, 46, 46);
+  color: #1a1a1a;
   margin-left: 22px;
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 
 /* SEÇÃO LEI MARIA DA PENHA */
@@ -302,21 +387,22 @@ summary {
   display: block;
   width: 240px;
   margin: auto;
-  padding: 10px;
+  padding: 12px 20px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   background-color: white;
-  color: black;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.289);
+  color: rgb(108, 0, 108);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .container-lei-maria-penha > .banner-lei > a:hover {
-  scale: 105%;
   background-color: rgb(171, 0, 171);
   color: white;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(171, 0, 171, 0.4);
 }
 
 .container-lei-maria-penha > .conteudo-lei {
@@ -404,58 +490,85 @@ summary {
 footer {
   display: flex;
   flex-flow: column nowrap;
-  gap: 25px;
+  gap: 30px;
   width: 100%;
-  padding: 20px 15px;
-  background-image: linear-gradient(145deg, #490149e2, transparent);
+  padding: 40px 20px;
+  background-color: #5a1e6f;
+  color: #f0f0f0;
+  border-top: 3px solid var(--cor-primaria-escura);
 }
 
 footer > #footer-principal {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  display: none;
 }
 
-footer > #footer-mobile {
-  text-align: center;
-}
-
-footer > #footer-principal > div > small {
+footer > #footer-principal h3 {
+  color: #e5989b;
+  font-size: 1.2em;
+  margin-bottom: 5px;
   display: none;
 }
 
 footer > #footer-principal > div > p {
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 0.95em;
   display: none;
+}
+
+footer > #footer-mobile {
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.85em;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  order: 3;
+}
+
+footer > #footer-mobile {
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.85em;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer > #footer-navegacao {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer > #footer-navegacao > .footer-coluna > ul {
   display: flex;
   flex-flow: column wrap;
-  gap: 15px;
+  gap: 12px;
   list-style: none;
 }
 
 footer > #footer-navegacao > .footer-coluna > ul > .footer-titulo {
-  font-size: 0.8em;
-  font-weight: bold;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #e5989b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
 }
 
 footer > #footer-navegacao > .footer-coluna > ul > li > a {
-  color: black;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 footer > #footer-navegacao > .footer-coluna > ul > li > a:hover {
-  color: rgb(108, 0, 108);
-  cursor: pointer;
-  text-decoration: rgb(108, 0, 108) underline;
+  color: #e5989b;
+  transform: translateX(5px);
 }

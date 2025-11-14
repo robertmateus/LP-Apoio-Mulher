@@ -1,5 +1,116 @@
 @charset "UTF-8";
 
+/* Media queries ordenadas de forma crescente (mobile-first) */
+
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia {
+    font-size: 1.1em;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  footer > #footer-navegacao {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  footer > #footer-navegacao > .footer-coluna > nav > ul > .footer-titulo {
+    font-size: 0.95em;
+  }
+
+  footer > #footer-navegacao > .footer-coluna > ul > li > a {
+    font-size: 0.9em;
+  }
+}
+
+
+@media screen and (min-width: 850px) {
+
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia {
+    width: auto;
+  }
+
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia {
+    justify-content: space-between;
+  }
+
+  .secao-como-denunciar > .container-onde-denunciar > .destaque-180 > .card-denuncia-180 {
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+
+  .secao-como-denunciar > .container-onde-denunciar > .lista-canais-denuncia > .canal-denuncia > div > .descricao-canal {
+    font-size: 0.8em;
+  }
+
+  footer {
+    height: 100%;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 30px;
+  }
+
+  footer > #footer-principal {
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-right: 20px;
+    width: 50%;
+    text-align: left;
+    flex-flow: column nowrap;
+  }
+
+  /* Exibir título do site acima da linha do rodapé */
+  footer > #footer-principal {
+    position: relative;
+  }
+
+  footer > #footer-principal h3 {
+    margin: 0 auto 10px auto;
+    display: block;
+    position: relative;
+    top: -26px;
+    background: #5a1e6f;
+    padding: 6px 14px;
+    border-radius: 6px;
+    z-index: 3;
+    color: #e5989b;
+    font-weight: 700;
+  }
+
+  footer > #footer-navegacao {
+    width: 50%;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: none;
+  }
+
+  footer > #footer-principal > div > p {
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+
+  footer > #footer-principal > div > small {
+    display: block;
+    margin-top: 15px;
+    color: #ffffff;
+  }
+
+  footer > #footer-mobile {
+    display: none;
+  }
+}
+
+
 @media screen and (min-width: 1087px) {
   
   #menu-burguer {
@@ -43,13 +154,136 @@
 
   .secao-tipos-violencia > .container {
     box-sizing: border-box;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: stretch;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  /* Scrollbar customizada para o carrossel de cards (apenas desktop) */
+  .secao-tipos-violencia > .container::-webkit-scrollbar {
+    height: 10px;
+  }
+  .secao-tipos-violencia > .container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  .secao-tipos-violencia > .container::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 10px;
+  }
+  .secao-tipos-violencia > .container:hover::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria-escura);
+  }
+  .secao-tipos-violencia > .container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-primaria) transparent;
   }
 
   .secao-tipos-violencia > .container > .card-tipo-violencia {
-    width: 45%;
+    width: 340px;
+    min-width: 340px;
+    min-height: 420px;
+  }
+
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary {
+    list-style: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  
+  .conteudo-lei > p {
+    padding: 0 20%;
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+
+  
+  .container-lei-maria-penha > .banner-lei {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 15pt;
+    padding-top: 220px;
+    padding-bottom: 220px;
+  }
+
+  .container-lei-maria-penha > .banner-lei > a {
+    width: 300px;
+  }
+
+  
+  .secao-como-denunciar > .container-onde-denunciar {
+    padding: 0 22%;
+  }
+
+  footer {
+    padding: 30px 22%;
+  }
+}
+@media screen and (min-width: 1087px) {
+  
+  #menu-burguer {
+    display: none;
+  }
+
+  #menu-navegacao {
+    display: flex;
+  }
+
+  #menu-navegacao > ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #menu-navegacao ul > li:hover {
+    background-color: #9d4edd66;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 5px;
+  }
+
+  #menu-navegacao ul > li > a {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  header {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .header-container > #menu-burguer {
+    display: none;
+  }
+
+  .secao-violencia {
+    padding: 0 20%;
+  }
+
+  .secao-tipos-violencia > .container {
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+  }
+
+  .secao-tipos-violencia > .container > .card-tipo-violencia {
+    width: 340px;
+    min-width: 340px;
+    min-height: 420px;
   }
 
 
@@ -120,35 +354,59 @@
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 40px 30px;
   }
 
   footer > #footer-principal {
-    height: 150px;
+    height: auto;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 10px;
-    padding-right: 15px;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-right: 20px;
     width: 50%;
+    text-align: left;
+    flex-flow: column nowrap;
+  }
+
+  /* Exibir título do site acima da linha do rodapé */
+  footer > #footer-principal {
+    position: relative;
+  }
+
+  footer > #footer-principal h3 {
+    margin: 0 auto 10px auto;
+    display: block;
+    position: relative;
+    top: -26px;
+    background: #5a1e6f;
+    padding: 6px 14px;
+    border-radius: 6px;
+    z-index: 3;
+    color: #e5989b;
+    font-weight: 700;
   }
 
   footer > #footer-navegacao {
     width: 50%;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: none;
   }
 
   footer > #footer-principal > div > p {
-    color: black;
-    font-weight: 600;
     display: block;
-    font-size: 0.8em;
-  }
-
-  footer > #footer-principal > div > h3 {
-    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9em;
   }
 
   footer > #footer-principal > div > small {
     display: block;
+    margin-top: 15px;
+    color: #ffffff;
   }
 
   footer > #footer-mobile {
@@ -172,7 +430,7 @@
   }
 
   footer > #footer-navegacao > .footer-coluna > nav > ul > .footer-titulo {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 
   footer > #footer-navegacao > .footer-coluna > ul > li > a {

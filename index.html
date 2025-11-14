@@ -19,20 +19,20 @@
         <img src="imagem/icones/logo.svg" alt="Logo" width="25" height="25"> 
         Apoio Mulher
       </h1>
-      <i id="menu-burguer" class="material-icons" onclick="clickMenu()">menu</i>
+      <i id="menu-burguer" class="material-icons" role="button" tabindex="0" aria-controls="menu-navegacao" aria-expanded="false" onclick="clickMenu()">menu</i>
     </div>
 
     <nav id="menu-navegacao">
       <ul>
-        <li><a onclick="clickMenu()" href="#secao-inicio">Início</a></li>
-        <li><a onclick="clickMenu()" href="#secao-violencia">O que é Violência Doméstica</a></li>
-        <li><a onclick="clickMenu()" href="#secao-tipos-violencia">Tipos de Violência</a></li>
-        <li><a onclick="clickMenu()" href="#secao-lei">A Lei</a></li>
-        <li><a onclick="clickMenu()" href="#secao-como-denunciar">Onde Denunciar</a></li>
+        <li><a href="#secao-inicio">Início</a></li>
+        <li><a href="#secao-violencia">O que é Violência Doméstica</a></li>
+        <li><a href="#secao-tipos-violencia">Tipos de Violência</a></li>
+        <li><a href="#secao-lei">A Lei</a></li>
+        <li><a href="#secao-como-denunciar">Onde Denunciar</a></li>
         <li>
           <a class="botao-denuncie" 
              href="https://delegaciaeletronica.pcdf.df.gov.br/RegistroOcorrencia/Violencia_Domestica_Familiar_Contra_Mulher"
-             target="_blank">
+             target="_blank" aria-label="Registrar ocorrência de violência doméstica - delegacia eletrônica">
             Denuncie Agora
           </a>
         </li>
@@ -48,7 +48,7 @@
         <p>A informação é a sua maior proteção. Denuncie. Não se cale.</p>
         <a class="botao-denuncie-cta"
            href="https://delegaciaeletronica.pcdf.df.gov.br/RegistroOcorrencia/Violencia_Domestica_Familiar_Contra_Mulher"
-           target="_blank">
+           target="_blank" aria-label="Registrar ocorrência de violência doméstica - delegacia eletrônica">
           Denuncie Agora
         </a>
       </div>
@@ -82,7 +82,7 @@
               <li>Atirar objetos, sacudir e apertar os braços</li>
               <li>Estrangulamento ou sufocamento</li>
               <li>Lesões com objetos cortantes ou perfurantes</li>
-              <li>Ferimentos causados por queimaduras ou armas de fogo</li>
+              <li>Ferimentos causados por queimaduras</li>
               <li>Tortura</li>
             </ul>
           </details>
@@ -96,18 +96,16 @@
           <details>
             <summary>Saiba mais...</summary>
             <p style="color: rgb(46, 46, 46);">
-              É considerada qualquer conduta que: cause dano emocional e diminuição da autoestima; 
-              prejudique e perturbe o pleno desenvolvimento da mulher; ou vise degradar ou controlar 
-              suas ações, comportamentos, crenças e decisões.
+              É considerada qualquer conduta que cause dano emocional e diminuição da autoestima.
             </p>
             <br>
             <ul class="lista-violencia" type="square">
-              <li>Abuso Verbal e Emocional</li>
-              <li>Coerção e Intimidação</li>
-              <li>Controle Social e Isolamento</li>
-              <li>Gaslighting (Manipulação da Sanidade)</li>
-              <li>Monitoramento e Perseguição</li>
-              <li>Restrição da Autonomia</li>
+              <li>Abuso verbal e emocional</li>
+              <li>Coerção e intimidação</li>
+              <li>Controle social e isolamento</li>
+              <li>Gaslighting (manipulação da sanidade)</li>
+              <li>Monitoramento e perseguição</li>
+              <li>Restrição da autonomia</li>
             </ul>
           </details>
         </div>
@@ -120,22 +118,20 @@
           <details>
             <summary>Saiba mais...</summary>
             <p style="color: rgb(46, 46, 46);">
-              Trata-se de qualquer conduta que constranja a presenciar, a manter ou a participar de 
-              relação sexual não desejada mediante intimidação, ameaça, coação ou uso da força.
+              Qualquer conduta que constranja a presenciar, manter ou participar de relação sexual não desejada.
             </p>
             <br>
             <ul class="lista-violencia" type="square">
-              <li>Ato Sexual Sem Consentimento</li>
-              <li>Coerção Sexual Não-Consensual</li>
-              <li>Controle Reprodutivo</li>
-              <li>Exploração e Coação para Matrimônio/Prostituição</li>
-              <li>Anulação dos Direitos Sexuais</li>
-              <li>Anulação dos Direitos Reprodutivos</li>
+              <li>Ato sexual sem consentimento</li>
+              <li>Coerção sexual não consensual</li>
+              <li>Controle reprodutivo</li>
+              <li>Exploração e coação para matrimônio</li>
+              <li>Anulação dos direitos sexuais</li>
+              <li>Anulação dos direitos reprodutivos</li>
             </ul>
           </details>
         </div>
 
-        <!-- Violência Moral -->
         <div class="card-tipo-violencia">
           <div class="card-header">
             <img src="imagem/icones/icon4.svg" alt="Ícone Violência Moral" width="65" height="65">
@@ -144,16 +140,38 @@
           <details>
             <summary>Saiba mais...</summary>
             <p style="color: rgb(46, 46, 46);">
-              É considerada qualquer conduta que configure calúnia, difamação ou injúria.
+              Qualquer conduta que configure calúnia, difamação ou injúria.
             </p>
             <br>
             <ul class="lista-violencia" type="square">
-              <li>Calúnia (Acusação Falsa de Crime)</li>
-              <li>Injúria e Difamação (Ataque à Honra)</li>
-              <li>Emissão de Juízos Morais e Críticas Abusivas</li>
-              <li>Exposição da Vida Íntima</li>
-              <li>Desvalorização da Imagem Pessoal</li>
-              <li>Ataque Constante à Credibilidade</li>
+              <li>Calúnia (acusação falsa de crime)</li>
+              <li>Injúria e difamação (ataque à honra)</li>
+              <li>Críticas abusivas e humilhação</li>
+              <li>Exposição da vida íntima</li>
+              <li>Desvalorização da imagem pessoal</li>
+              <li>Ataque constante à credibilidade</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card-tipo-violencia">
+          <div class="card-header">
+            <img src="imagem/icones/icon8.svg" alt="Ícone Violência Patrimonial" width="65" height="65">
+            <h3>Violência Patrimonial</h3>
+          </div>
+          <details>
+            <summary>Saiba mais...</summary>
+            <p style="color: rgb(46, 46, 46);">
+              Retenção, subtração ou destruição de bens, documentos e recursos econômicos.
+            </p>
+            <br>
+            <ul class="lista-violencia" type="square">
+              <li>Destruição de bens pessoais</li>
+              <li>Retenção de documentos</li>
+              <li>Controle financeiro</li>
+              <li>Danificação de propriedade</li>
+              <li>Roubo de bens e valores</li>
+              <li>Impedimento de acesso a recursos</li>
             </ul>
           </details>
         </div>
@@ -164,7 +182,7 @@
       <div class="container-lei-maria-penha">
         <div class="banner-lei">
           <h1>A Lei na Íntegra</h1>
-          <a href="http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm" target="_blank">
+          <a href="http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm" target="_blank" aria-label="Abrir texto completo da Lei Maria da Penha em nova aba">
             Acessar a Lei Maria da Penha
           </a>
         </div>
@@ -201,9 +219,9 @@
           <div class="card-denuncia-180">
             <img src="imagem/imagens/imagem3.png" alt="Ícone 180" width="150px">
             <p style="text-align: justify;">
-              A Central de Atendimento à Mulher é um serviço criado para o combate à violência 
-              contra a mulher e oferece três tipos de atendimento: registros de denúncias, 
-              orientações vítimas de violência e informações sobre campanhas.
+              A Central de Atendimento à Mulher (Ligue 180) é um serviço criado para o combate à violência 
+              contra a mulher e oferece três tipos de atendimento: registro de denúncias; 
+              orientação às vítimas de violência; e informações sobre campanhas.
             </p>
           </div>
         </div>
@@ -272,7 +290,7 @@
       </div>
       <div>
         <small style="font-size: 0.7em;">
-          &copy;2025 | Desenvolvido por <strong>3º Sgt Robert Gomes</strong>
+          &copy;2025 | Desenvolvido pelo <strong><i>3º Sgt Robert Gomes</i></strong>
         </small>
       </div>
     </div>
@@ -322,7 +340,7 @@
 
     <div id="footer-mobile">
       <small style="font-size: 0.7em;">
-        &copy;2025 | Desenvolvido por <strong>3º Sgt Robert Gomes</strong>
+        &copy;2025 | Desenvolvido pelo <strong><i>3º Sgt Robert Gomes</i></strong>
       </small>
     </div>
   </footer>
