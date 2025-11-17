@@ -50,7 +50,7 @@ cd LP-Apoio-Mulher
 O projeto está disponível online em:
 
 - **GitHub Pages**: [https://robertmateus.github.io/LP-Apoio-Mulher](https://robertmateus.github.io/LP-Apoio-Mulher)
-- **Vercel**:
+- **Vercel**: [https://lp-apoio-mulher.vercel.app](https://lp-apoio-mulher.vercel.app)
 
 ## 🤝 Como Contribuir
 
@@ -85,6 +85,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 <div align="center">
 
 **⚠️ Importante:** Este projeto é uma iniciativa educacional e de conscientização. Em caso de emergência, procure sempre os canais oficiais de apoio e proteção.
-
 
 </div>
