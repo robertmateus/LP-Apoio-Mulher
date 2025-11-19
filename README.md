@@ -72,7 +72,7 @@ Se você ou alguém que você conhece está em situação de violência, procure
 
 ## 👥 Autor
 
-Projeto desenvolvido por **Robert Mateus Moreira Gomes** como parte de um Projeto de Extensão universitário, publicado na intranet do Batalhão do Exército Brasileiro onde sirvo.
+Projeto desenvolvido por **Robert Mateus Moreira Gomes** como parte de um Projeto de Extensão universitário.
 
 [![GitHub](https://img.shields.io/badge/GitHub-robertmateus-181717?style=for-the-badge&logo=github)](https://github.com/robertmateus)
 
