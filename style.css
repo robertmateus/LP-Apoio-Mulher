@@ -572,3 +572,14 @@ footer > #footer-navegacao > .footer-coluna > ul > li > a:hover {
   color: #e5989b;
   transform: translateX(5px);
 }
+
+.desenvolvido {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+.desenvolvido:hover {
+  color: #e5989b;
+  transform: translateX(5px);
+}
