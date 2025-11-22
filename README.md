@@ -59,16 +59,6 @@ O projeto está disponível online em:
 
 - **GitHub Pages**: [https://robertmateus.github.io/LP-Apoio-Mulher](https://robertmateus.github.io/LP-Apoio-Mulher)
 
-## 🤝 Como Contribuir
-
-Contribuições são sempre bem-vindas! Se você deseja ajudar a melhorar este projeto:
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
-
 ## 📞 Canais de Apoio
 
 Se você ou alguém que você conhece está em situação de violência, procure ajuda:
