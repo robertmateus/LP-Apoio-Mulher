@@ -7,8 +7,6 @@
 Este projeto é uma Landing Page informativa e acolhedora, desenvolvida para oferecer suporte, conscientização e recursos essenciais para mulheres.  
 A proposta é criar um ambiente seguro com informações claras sobre direitos, proteção, canais de denúncia e empoderamento feminino.
 
-Este projeto também integra minha participação na **Imersão Dev da Alura com Google**, utilizada como meio de aprimoramento e expansão das habilidades em HTML, CSS e JavaScript.
-
 ---
 
 ## 🎯 Objetivos
